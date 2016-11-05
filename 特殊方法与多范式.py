@@ -39,6 +39,13 @@ print(li[3], li.__getitem__(3))
 print("""——————————————————4函数————————————————————————""")
 
 
+# 在Python中，函数也是一种对象。
+# 实际上，任何一个有__call__()特殊方法的对象都被当作是函数。
 class SampleMore(object):
     def __call__(self, a):
         return a + 5
+
+
+add = SampleMore()
+print(add())
+
