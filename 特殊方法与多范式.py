@@ -46,6 +46,9 @@ class SampleMore(object):
         return a + 5
 
 
-add = SampleMore()
-print(add())
-
+add = SampleMore()  # A function object
+print(add(5))  # Call function
+m = map(add, [2, 4, 5])  # Pass around function object
+print(m)  # 可以使用lambda
+for item in m:
+    print(item)
